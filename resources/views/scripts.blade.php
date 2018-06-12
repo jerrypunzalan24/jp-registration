@@ -49,7 +49,7 @@
   e.preventDefault()
   var next = true
   $('#personal input').each(function(e){
-    if($(this).value === undefined){
+    if($(this).val() === ''){
       next = false
     }
   })

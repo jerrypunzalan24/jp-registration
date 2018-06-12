@@ -35,6 +35,7 @@ class AdminController extends Controller
     }
     public function delete(Request $request){
       \DB::table('members')->where('member_id',$request->id)->delete();
+      \DB::table('questions')->where('member_id', $request->id)->delete();
       return redirect('/admin')->with('edit-success','Member has been deleted! Goodbye :(');
     }
 }
