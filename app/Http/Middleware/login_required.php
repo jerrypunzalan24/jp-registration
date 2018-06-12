@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
-
+use Illuminate\Http\Request;
 use Closure;
 
 class login_required
@@ -13,11 +13,11 @@ class login_required
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next)
     {
-        if($request->session->has('login')){ 
+        if($request->session()->has('login')){ 
             return $next($request);   
         }
-        return redirect('/login')
+        return redirect('/login');
     }
 }

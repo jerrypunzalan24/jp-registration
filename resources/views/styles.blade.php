@@ -8,9 +8,23 @@
   font-family:Roboto;
   src:url({{asset('fonts/Roboto-Regular.ttf')}});
 }
-label,h2 ,p, h4{
+body{
+  background-image:url('{{asset('img/bg.png')}}');background-size:cover;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   font-family:Roboto;
-  color:#2e2e2e;
+}
+::-moz-placeholder { /* Firefox 19+ */
+ font-family:Roboto;
+}
+:-ms-input-placeholder { /* IE 10+ */
+ font-family:Roboto;
+}
+:-moz-placeholder { /* Firefox 18- */
+ font-family:Roboto;
+}
+*{
+  font-family:Roboto;
 }
 .ui.button{
   font-family:Roboto;
