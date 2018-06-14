@@ -9,7 +9,7 @@
   src:url({{asset('fonts/Roboto-Regular.ttf')}});
 }
 body{
-  background-image:url('{{asset('img/bg.png')}}');background-size:cover;
+  background-image:url('{{asset('img/bg.png')}}');background-size:cover;background-attachment:fixed;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   font-family:Roboto;

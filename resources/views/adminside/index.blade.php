@@ -1,6 +1,6 @@
 @include('../styles')
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<div class="ui menu" style ='border-radius:0px'>
+<div class="ui fixed menu" style ='border-radius:0px'>
   <a class ='right item' href= 'admin/logout'>
     <i class ='home icon'></i>Logout
   </a>
@@ -47,17 +47,11 @@
         <div class ='field'>
           <label>Gender</label>
           <select name ='gender' class ='ui fluid dropdown'>
-            <option value ='0'>Male</option>
-            <option value ='1'>Female</option>
           </select>
         </div>
         <div class ='field'>
           <label>Course</label>
           <select name ='course' class ='ui fluid dropdown'>
-            <option value = 'bsit'>BSIT</option>
-            <option value ='bscs'>BSCS</option>
-            <option value ='bsis'>BSIS</option>
-            <option value ='bsemc'>BSEMC</option>
           </select>
         </div>
       </div>
@@ -74,7 +68,7 @@
     </form>
   </div>
 </div>
-<div class ='ui card' style ='width:75%;margin:auto'>
+<div class ='ui card' style ='width:75%;margin:auto;margin-top:70px'>
   <div class ='content'>
     @if(session('edit-success')!==null)
     <div class ='ui blue message'><i class ='close icon'></i><div class ='header'>Success</div> {{session('edit-success')}}</div>
@@ -86,7 +80,7 @@
           <i class ='search icon'></i>
         </div>
       </div>
-      <div class ='three wide column'><button class ='ui button fluid green'>Print</button></div>
+      <div class ='three wide column'><a href ='admin/print' class ='ui button fluid green'>Print</a></div>
       <div class ='three wide column'><button class ='ui button fluid blue'>Show statistics</button></div>
     </div>
     <table class ='ui striped celled table'>

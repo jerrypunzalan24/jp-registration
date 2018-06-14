@@ -16,7 +16,7 @@
             </div>
             @if(session('success')!==null)
             <div class ='ui black message' style ='background-color:#4800FF'> 
-              <i class="close icon"></i>
+              <i class="close icon"></i>/
               <h4 style ='color:white;font-weight:500;margin-top:0px'>Register success - Welcome to the Club, {{session('success')}}!</h4>
             </div>
             @endif
@@ -26,7 +26,7 @@
             <div id ='personal'>          
               <div class='field'>
                 <label>Student Number <sup>*</sup></label>
-                <input value ='' type ='number' placeholder ='Student Number' name ='studentnumber' REQUIRED>
+                <input value ='' type ='number' maxlength="11" placeholder ='Student Number' name ='studentnumber' REQUIRED>
               </div>
               <div class ='two fields'>
                 <div class ='field'>
@@ -58,7 +58,7 @@
               </div>
               <div class ='field'>
                 <label>Mobile Number <sup>*</sup></label>
-                <input value ='' type ='number' placeholder ='Mobile Number' name ='mobilenumber' REQUIRED>
+                <input value ='' type ='number' maxlength = "11" placeholder ='Mobile Number' name ='mobilenumber' REQUIRED>
               </div>
             </div>
             <div id ='survey' style ='display:none'>
