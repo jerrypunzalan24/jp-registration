@@ -28,12 +28,12 @@ class AdminController extends Controller
     Fpdf::Cell(30,10,'Contact',1,0,'C');
     Fpdf::Cell(25,10,'Course',1,0,'C');
     Fpdf::Cell(20,10,'Gender',1,0,'C');
-    Fpdf::Cell(35,10,'Date Registred',1,0,'C');
+    Fpdf::Cell(35,10,'Date Registered',1,0,'C');
     Fpdf::Ln();
     Fpdf::SetFont("Arial","",10);
     $count = 0;
     foreach($members as $member){
-      Fpdf::Cell(50,10, "{$member->member_firstname} {$member->member_lastname} {$count}",1,0,'C');
+      Fpdf::Cell(50,10, "{$member->member_firstname} {$member->member_lastname}",1,0,'C');
       Fpdf::Cell(30,10, $member->member_studentnumber,1,0,'C');
       Fpdf::Cell(30,10,$member->member_number,1,0,'C');
       Fpdf::Cell(25,10,strtoupper($member->member_course),1,0,'C');
