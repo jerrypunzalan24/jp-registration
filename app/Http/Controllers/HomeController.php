@@ -33,7 +33,7 @@ class HomeController extends Controller
       'question_content' => $request->question1
     ]);
     if(count($request->question2) != 0){
-      foreach($request->question2 as $question){
+      foreach($request->question2 as $question => $value){
         \DB::table('questions')->insertgetId([
           'member_id'        => $get_latest_id,
           'question_number'  => 2,
