@@ -5,6 +5,32 @@
     <i class ='home icon'></i>Logout
   </a>
 </div>
+<div class ='ui large modal' id = 'statistics'>
+  <div class ='header'>Statistics</div>
+  <div class ='scrolling content'>
+    <div class ='ui equal width grid'>
+      <div class='column'>
+        <p style='text-align:center'>Question 1 Seminars vs Competitions</p>
+        <canvas id ='question1' width ='150' height = '70'></canvas>
+      </div>
+      <div class ='column'>
+        <p style ='text-align:center'>Question 2 Chosen topics</p>
+        <canvas id = 'question2' width = '150' height = '70'></canvas>
+      </div>
+    </div>
+    <h3>Members want these topics</h3>
+    <div class ='ui divider'></div>
+    <table class ='ui striped celled table'>
+      <thead>
+        <th>Topics</th>
+        <th>Count</th>
+      </thead>
+      <tbody id = 'topiclist'>
+        
+      </tbody>
+    </table>
+  </div>
+</div>
 <div class ='ui tiny modal' style ="width:30%" id ='delete'>
   <div class ='header'>Delete</div>
   <div class ='content'>
@@ -80,8 +106,8 @@
           <i class ='search icon'></i>
         </div>
       </div>
-      <div class ='three wide column'><a href ='admin/print' class ='ui button fluid green'>Print</a></div>
-      <div class ='three wide column'><button class ='ui button fluid blue'>Show statistics</button></div>
+      <div class ='three wide column'><a href ='admin/print' class ='ui button fluid green'><i class ='print icon'></i>Print</a></div>
+      <div class ='three wide column'><button id ='stats' class ='ui button fluid blue'><i class ='chart pie icon'></i>Show statistics</button></div>
     </div>
     <table class ='ui striped celled table'>
       <thead>

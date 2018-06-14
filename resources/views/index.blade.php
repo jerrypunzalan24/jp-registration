@@ -16,7 +16,7 @@
             </div>
             @if(session('success')!==null)
             <div class ='ui black message' style ='background-color:#4800FF'> 
-              <i class="close icon"></i>/
+              <i class="close icon"></i>
               <h4 style ='color:white;font-weight:500;margin-top:0px'>Register success - Welcome to the Club, {{session('success')}}!</h4>
             </div>
             @endif

@@ -21,4 +21,5 @@ Route::group(['prefix'=>'admin', 'middleware'=>'login_required'],function(){
   Route::post('/edit','AdminController@edit');
   Route::post('/delete','AdminController@delete');
   Route::post('/getdata','AjaxController@getEditData');
+  Route::post('/questions','AjaxController@getQuestionData');
 });
