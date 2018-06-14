@@ -16,7 +16,6 @@ class HomeController extends Controller
     return view('index',['checkboxes' => $checkboxes]);
   }
   public function create(Request $request){
-    for($i = 0; $i < 30; $i++){
     \DB::table('members')->insertgetId([
       'member_firstname'     => $request->firstname,
       'member_lastname'      => $request->lastname,
@@ -27,7 +26,6 @@ class HomeController extends Controller
       'created_at'           => date("Y-m-d H:i:s"),
       'updated_at'           => date("Y-m-d H:i:s")
     ]);
-  }
     $get_latest_id = \DB::table('members')->max('member_id');
     \DB::table('questions')->insertgetId([
       'member_id'        => $get_latest_id,
